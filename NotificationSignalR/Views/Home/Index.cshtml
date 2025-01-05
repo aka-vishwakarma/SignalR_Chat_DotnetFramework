@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    @*  <div class="row p-1">
+        <div class="col-1">User</div>
+        <div class="col-5"><input type="text" id="userInput" /></div>
+        </div> *@
+    <div class="row p-1">
+        <div class="col-2">Name</div>
+        <div class="col-10"><label id="loggedInUserName"></label></div>
+    </div>
+    <div class="row p-1">
+        <div class="col-2">Id</div>
+        <div class="col-10"><label id="loggedInUserId"></label></div>
+    </div>
+    <div class="row p-1">
+        <div class="col-2">Message</div>
+        <div class="col-10"><input type="text" class="w-100" id="messageInput" /></div>
+    </div>
+    <div class="row p-1">
+        <div class="col-2">Send to</div>
+        <div class="col-10"><input type="text" class="w-100" id="userId" /></div>
+    </div>
+    <div class="row p-1">
+        <div class="col-12 text-end">
+            <input type="button" id="sendButton" value="Send Message" />
+        </div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6">
+            <hr />
+        </div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+</div>
+
+@*
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button> *@
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+</div>
+<div class="toast d-none" id="toastToClone" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <strong class="me-auto">Bootstrap</strong>
+        <small class="text-body-secondary timestamp">just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+        See? Just like this.
+    </div>
+</div>
